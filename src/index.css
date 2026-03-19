@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   🎨 ESTILOS PERSONALIZADOS
+   ======================================== */
+
+/**
+ * ANIMACIÓN DEL FONDO GRADIENTE
+ * 
+ * CÓMO FUNCIONA:
+ * - Cambia el tamaño del gradiente de fondo
+ * - Crea un efecto de "respiración" suave
+ * - Se repite infinitamente
+ * 
+ * CÓMO MODIFICAR:
+ * - Cambia los % para hacer el efecto más o menos intenso
+ * - Cambia la duración en la clase .animate-gradient (abajo)
+ */
+@keyframes gradient {
+
+    0%,
+    100% {
+        background-size: 200% 200%;
+        background-position: left center;
+    }
+
+    50% {
+        background-size: 200% 200%;
+        background-position: right center;
+    }
+}
+
+/**
+ * ANIMACIÓN DE APARICIÓN (FADE IN)
+ * 
+ * CÓMO FUNCIONA:
+ * - Empieza invisible (opacity: 0)
+ * - Empieza un poco más arriba (translateY: -20px)
+ * - Gradualmente aparece y baja a su posición
+ * 
+ * CÓMO MODIFICAR:
+ * - Cambia translateY para que venga de más arriba o abajo
+ * - Cambia opacity inicial para empezar más o menos visible
+ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/**
+ * ANIMACIÓN DE PULSO BRILLANTE
+ * 
+ * CÓMO FUNCIONA:
+ * - Hace que el texto brille con un efecto de sombra
+ * - El brillo aumenta y disminuye suavemente
+ * 
+ * CÓMO MODIFICAR:
+ * - Cambia los colores en text-shadow
+ * - Cambia el tamaño del blur (los números como 20px, 30px)
+ * - Prueba con otros colores: cyan, purple, pink, etc.
+ */
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 20px rgba(236, 72, 153, 0.5),
+            0 0 30px rgba(236, 72, 153, 0.3),
+            0 0 40px rgba(236, 72, 153, 0.2);
+    }
+
+    50% {
+        text-shadow:
+            0 0 30px rgba(236, 72, 153, 0.8),
+            0 0 40px rgba(236, 72, 153, 0.6),
+            0 0 50px rgba(236, 72, 153, 0.4);
+    }
+}
+
+/**
+ * ANIMACIÓN DE FLOTACIÓN
+ * Para elementos decorativos que flotan suavemente
+ */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    33% {
+        transform: translateY(-20px) translateX(10px);
+    }
+
+    66% {
+        transform: translateY(10px) translateX(-10px);
+    }
+}
+
+/**
+ * ANIMACIÓN DE FLOTACIÓN CON DELAY
+ * Similar a float pero con movimiento diferente
+ */
+@keyframes float-delayed {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    33% {
+        transform: translateY(15px) translateX(-15px);
+    }
+
+    66% {
+        transform: translateY(-15px) translateX(15px);
+    }
+}
+
+/* ========================================
+   🎯 CLASES APLICADAS
+   ======================================== */
+
+/**
+ * CLASE: animate-gradient
+ * Aplica la animación del gradiente al fondo
+ * 
+ * CÓMO MODIFICAR:
+ * - Cambia 15s para hacer la animación más rápida o lenta
+ * - ease: suave | linear: constante | ease-in-out: acelera y desacelera
+ */
+.animate-gradient {
+    animation: gradient 15s ease infinite;
+}
+
+/**
+ * CLASE: animate-fade-in
+ * Aplica la animación de aparición a elementos
+ * 
+ * CÓMO MODIFICAR:
+ * - Cambia 1s para que aparezca más rápido o lento
+ * - Cambia 0.3s para que tarde más o menos en empezar
+ */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+/**
+ * CLASE: lyric-active
+ * Estilo especial para la línea de letra que está sonando
+ * 
+ * CÓMO FUNCIONA:
+ * - Aplica el efecto de brillo (glow)
+ * - Hace que el texto sea más visible y llamativo
+ * 
+ * CÓMO MODIFICAR:
+ * - Cambia 2s para que el pulso sea más rápido o lento
+ * - Cambia los colores en la animación @keyframes glow (arriba)
+ */
+.lyric-active {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/**
+ * CLASE: animate-float
+ * Animación de flotación suave para elementos decorativos
+ */
+.animate-float {
+    animation: float 8s ease-in-out infinite;
+}
+
+/**
+ * CLASE: animate-float-delayed
+ * Animación de flotación con patrón diferente
+ */
+.animate-float-delayed {
+    animation: float-delayed 10s ease-in-out infinite;
+}
+
+/**
+ * CLASE: animate-fade-in-delayed
+ * Aparición con delay para efectos escalonados
+ */
+.animate-fade-in-delayed {
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+/**
+ * SCROLL PERSONALIZADO (Barra de desplazamiento)
+ * 
+ * CÓMO FUNCIONA:
+ * - Cambia el aspecto de la barra de scroll
+ * - La hace más bonita y acorde al diseño
+ * 
+ * CÓMO MODIFICAR:
+ * - Cambia los colores (rgba)
+ * - Cambia el ancho (width)
+ * - Cambia border-radius para hacerla más o menos redondeada
+ */
+.lyrics-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lyrics-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.lyrics-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ec4899, #f43f5e);
+    border-radius: 10px;
+}
+
+.lyrics-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #db2777, #e11d48);
+}
+
+/* ========================================
+   📱 RESPONSIVE - Ajustes para móviles
+   ======================================== */
+
+/**
+ * En pantallas pequeñas (móviles)
+ * Ajustamos tamaños para que se vea bien
+ */
+@media (max-width: 768px) {
+    .lyric-active {
+        font-size: 1.5rem !important;
+        /* Más pequeño en móvil */
+    }
+}

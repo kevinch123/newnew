@@ -67,6 +67,36 @@ function Letters({ onBack }) {
             Gracias por existir y por hacerme tan feliz.`,
             color: "from-amber-400 to-orange-500",
             icon: "💖"
+        },
+        {
+            id: 4,
+            title: "Te Quiero Mucho",
+            date: "Hoy",
+            preview: "Amor, no sé si te canses de escucharlo una y mil veces...",
+            content: `Amor, no sé si te canses de escucharlo una y mil veces. Y no me molesta repetirlo una y mil veces: eres lo mejor de mi vida. Te quiero mucho, gracias por estar y por ser una persona muy linda.
+
+            Fue algo tan inusual y bonito que aún no sé cómo explicarlo. De la nada pasó, y hoy estamos aquí. Siento una felicidad inefable y espero que no sea efímera.
+
+            Quiero recordarte lo feliz que me haces y lo mucho que me ayudas cuando me abrazas y simplemente somos tú y yo. Me haces perderme en una tranquilidad absoluta de la cual no quiero salir. Cuando me besas, sentir tus labios con los míos creando una conexión tan bonita que simplemente quiero cuidar; sentir tu piel con la mía y sentirme arropado por un calor que no quiero que desaparezca.
+
+            Simplemente te quiero, te quiero, y te lo diría una y mil veces. Lo gritaría para que sepan lo feliz que me haces. Simplemente, gracias.`,
+            color: "from-rose-400 to-fuchsia-500",
+            icon: "❤️"
+        },
+        {
+            id: 5,
+            title: "La Luz de Mis Ojos",
+            date: "Hoy",
+            preview: "Quiero que sepas que me enamoré de tu esencia...",
+            content: `Quiero que sepas que me enamoré de tu esencia, de esa forma tan tuya de ser que llamó mi atención desde el principio. Te sentí tan diferente a lo común, y aunque había cosas que no me convencian, dentro de mí empezó a crecer un sentimiento hacia ti, algo que no quería volver a sentir… pero de la nada apareció.
+
+            Me enamoré de tu bonita forma de ser, y cada día me enamoras más. Conocerte fue como un premio sorpresa; ya no tenía fe en muchas cosas, pero llegaste tú y me sorprendiste de una manera muy bonita.
+
+            No me cansaría de verte sonreír, de mirar esos ojitos hermosos que me hipnotizan y me hacen sentir en paz. Quiero pasar mucho tiempo contigo, y espero que ese tiempo esté lleno de tranquilidad, cariño y momentos bonitos. Que al final solo seamos tú y yo contra el mundo, encontrándonos siempre el uno al otro sin importar lo que pase.
+
+            Simplemente gracias por llegar a mi vida de la manera en que lo hiciste.`,
+            color: "from-cyan-400 to-blue-500",
+            icon: "🌟"
         }
     ];
 
